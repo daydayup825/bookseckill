@@ -5,9 +5,7 @@ import cn.hfbin.seckill.param.LoginParam;
 import cn.hfbin.seckill.result.Result;
 
 /**
- * My Blog : www.hfbin.cn
- * github: https://github.com/hfbin
- * Created by: HuangFuBin
+ * Created by: fanbopeng
  * Date: 2018/7/10
  * Time: 12:00
  * Such description:

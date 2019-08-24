@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Created by: HuangFuBin
+ * Created by: fanbopeng
  * Date: 2018/7/19
  * Time: 0:40
  * Such description:

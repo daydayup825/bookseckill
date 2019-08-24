@@ -9,7 +9,7 @@ import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.NotNull;
 
 /**
- * Created by: HuangFuBin
+ * Created by: fanbopeng
  * Date: 2018/7/10
  * Time: 10:11
  * Such description:

@@ -1,7 +1,7 @@
 package cn.hfbin.seckill.common;
 
 /**
- * Created by: HuangFuBin
+ * Created by: fanbopeng
  * Date: 2018/7/11
  * Time: 20:27
  * Such description:

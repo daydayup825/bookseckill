@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.UUID;
 
 /**
- * Created by: HuangFuBin
+ * Created by: fanbopeng
  * Date: 2018/7/16
  * Time: 16:47
  * Such description:

@@ -3,7 +3,7 @@ package cn.hfbin.seckill.service;
 import cn.hfbin.seckill.entity.OrderInfo;
 
 /**
- * Created by: HuangFuBin
+ * Created by: fanbopeng
  * Date: 2018/7/17
  * Time: 10:49
  * Such description:

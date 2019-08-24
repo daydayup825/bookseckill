@@ -14,6 +14,7 @@ import cn.hfbin.seckill.redis.RedisService;
 import cn.hfbin.seckill.redis.UserKey;
 import cn.hfbin.seckill.result.CodeMsg;
 import cn.hfbin.seckill.result.Result;
+import cn.hfbin.seckill.service.AccessLimitService;
 import cn.hfbin.seckill.service.SeckillGoodsService;
 import cn.hfbin.seckill.service.SeckillOrderService;
 import cn.hfbin.seckill.util.CookieUtil;
@@ -29,7 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by: HuangFuBin
+ * Created by: fanbopeng
  * Date: 2018/7/15
  * Time: 23:55
  * Such description:
@@ -51,6 +52,9 @@ public class SeckillController implements InitializingBean {
     @Autowired
     MQSender mqSender;
 
+    @Autowired
+    AccessLimitService accessLimitService;
+
     private HashMap<Long, Boolean> localOverMap = new HashMap<Long, Boolean>();
 
     /**
@@ -67,9 +71,17 @@ public class SeckillController implements InitializingBean {
         }
     }
 
+
+
     @RequestMapping("/seckill2")
     public String list2(Model model,
                         @RequestParam("goodsId") long goodsId, HttpServletRequest request) {
+
+        if (!accessLimitService.tryAcquireSeckill()){
+
+            return "系统目前繁忙,请等待";
+
+        }
 
         String loginToken = CookieUtil.readLoginToken(request);
         User user = redisService.get(UserKey.getByName, loginToken, User.class);
